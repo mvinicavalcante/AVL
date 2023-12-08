@@ -22,6 +22,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="avl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="avl.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

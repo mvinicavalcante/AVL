@@ -14,6 +14,8 @@ arvore inserir (arvore raiz, int valor, int *cresceu) ;
 
 arvore rotacao (arvore pivo);
 
+void balancear(arvore pivo, int valor, int *cresceu);
+
 void preorder(arvore raiz);
 void inorder(arvore raiz);
 void posorder(arvore raiz);

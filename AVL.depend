@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1703526223 source:c:\users\vinicius\onedrive\Área de trabalho\3o período\aedii\avl\teste.c
+	"avl.h"
+	<stdlib.h>
+	<stdio.h>
+
+1703515970 c:\users\vinicius\onedrive\Área de trabalho\3o período\aedii\avl\avl.c
+	"avl.h"
+	<stdlib.h>
+	<stdio.h>
+
+1703526586 c:\users\vinicius\onedrive\Área de trabalho\3o período\aedii\avl\avl.h
+
+1703527405 source:c:\users\vinicius\onedrive\Área de trabalho\3o período\aedii\avl\avl.c
+	"avl.h"
+	<stdlib.h>
+	<stdio.h>
+

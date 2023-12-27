@@ -2,13 +2,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int main() {
+int main(int argc, char * argv[]) {
     arvore minhaArvore = NULL;
     int cresceu;
 
-    minhaArvore = inserir(minhaArvore, 3, &cresceu);
-    minhaArvore = inserir(minhaArvore, 5, &cresceu);
     minhaArvore = inserir(minhaArvore, 7, &cresceu);
+    minhaArvore = inserir(minhaArvore, 5, &cresceu);
+    minhaArvore = inserir(minhaArvore, 3, &cresceu);
 
     printf("Preorder: ");
     preorder(minhaArvore);

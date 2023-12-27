@@ -2,6 +2,24 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/*
+    inicialização
+        p
+       / \
+      t1  u
+         / \
+        t2  t3
+
+
+    final
+        u
+       / \
+      p   t3
+     / \
+    t1  t2
+
+*/
+
 arvore rotacao_simples_esquerda(arvore pivo) {
     // Inicialização
     arvore u, t1, t2, t3;
@@ -78,7 +96,7 @@ arvore inserir(arvore raiz, int valor, int *cresceu) {
     // Caso base
     if (raiz == NULL) {
         // 1. Alocar espaço em memória
-        arvore nova = (arvore)malloc(sizeof(struct no));
+        arvore nova = (arvore) malloc(sizeof(struct no));
         // 2. Inicializar o novo nó
         nova->valor = valor;
         nova->esq = NULL;
@@ -154,3 +172,20 @@ void posorder(arvore raiz) {
         printf("[%d]", raiz->valor);
     }
 }
+
+arvore remover(arvore raiz, int valor) {
+    if(raiz == NULL) {
+        return raiz;
+    } else {
+        if(valor > raiz->dir) {
+            raiz->dir = remover(raiz->dir, valor);
+        } else if(valor < raiz->esq) {
+            raiz->esq = remover(raiz->esq, valor);
+        } else {
+
+        }
+    }
+
+}
+
+

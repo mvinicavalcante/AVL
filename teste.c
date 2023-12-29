@@ -22,5 +22,11 @@ int main(int argc, char * argv[]) {
     posorder(minhaArvore);
     printf("\n");
 
+    minhaArvore = remover(minhaArvore, 5);
+
+    printf("Preorder - pos remocao: ");
+    preorder(minhaArvore);
+    printf("\n");
+
     return 0;
 }

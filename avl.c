@@ -173,16 +173,60 @@ void posorder(arvore raiz) {
     }
 }
 
+arvore maior(arvore raiz) {
+    if(raiz == NULL) {
+        printf("Raiz vazia");
+        return -1;
+    } else {
+        if(raiz->dir != NULL) {
+            maior(raiz->dir);
+        }
+        if(raiz->dir == NULL) {
+            return raiz;
+        }
+    }
+}
+
 arvore remover(arvore raiz, int valor) {
     if(raiz == NULL) {
         return raiz;
     } else {
-        if(valor > raiz->dir) {
-            raiz->dir = remover(raiz->dir, valor);
-        } else if(valor < raiz->esq) {
-            raiz->esq = remover(raiz->esq, valor);
-        } else {
+        if(raiz->valor == valor) {
+            //caso de um filho
+            if(raiz->esq == NULL && raiz->dir == NULL) {
+                free(raiz);
+                return NULL;
+            }
 
+            //caso de um filho à esquerda
+            //guardo o ponteiro da memória que armazena o filho esquerdo
+            //e drop na raiz em questão
+            if(raiz->esq != NULL && raiz->dir == NULL) {
+                arvore retorno = raiz->esq;
+                free(raiz);
+                return retorno;
+            }
+
+            //caso de um filho à direita
+            if(raiz->esq == NULL && raiz->dir != NULL) {
+                arvore retorno = raiz->dir;
+                free(raiz);
+                return retorno;
+            }
+
+            //caso de dois filhos
+            if(raiz->esq != NULL && raiz->dir != NULL) {
+                int maiorValorEsquerda = maior(raiz->esq)->valor;
+                raiz->valor = maiorValorEsquerda;
+                raiz->esq = remover(raiz->esq, maiorValorEsquerda);
+                return raiz;
+            }
+        } else {
+            if(valor > raiz->valor) {
+                raiz->dir = remover(raiz, valor);
+            } else {
+                raiz->esq = remover(raiz, valor);
+            }
         }
     }
 

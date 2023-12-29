@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1703526223 source:c:\users\vinicius\onedrive\Área de trabalho\3o período\aedii\avl\teste.c
+1703814413 source:c:\users\vinicius\onedrive\Área de trabalho\3o período\aedii\avl\teste.c
 	"avl.h"
 	<stdlib.h>
 	<stdio.h>
@@ -9,7 +9,7 @@
 	<stdlib.h>
 	<stdio.h>
 
-1703526586 c:\users\vinicius\onedrive\Área de trabalho\3o período\aedii\avl\avl.h
+1703813481 c:\users\vinicius\onedrive\Área de trabalho\3o período\aedii\avl\avl.h
 
 1703527950 source:c:\users\vinicius\onedrive\Área de trabalho\3o período\aedii\avl\avl.c
 	"avl.h"

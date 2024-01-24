@@ -223,9 +223,9 @@ arvore remover(arvore raiz, int valor) {
             }
         } else {
             if(valor > raiz->valor) {
-                raiz->dir = remover(raiz, valor);
+                raiz->dir = remover(raiz->dir, valor);
             } else {
-                raiz->esq = remover(raiz, valor);
+                raiz->esq = remover(raiz->esq, valor);
             }
         }
     }

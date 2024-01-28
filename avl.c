@@ -109,14 +109,13 @@ arvore inserir(arvore raiz, int valor, int *cresceu) {
     } else {
         if (valor > raiz->valor) {
             raiz->dir = inserir(raiz->dir, valor, cresceu);
-            if (*cresceu) {
+            if (*cresceu == 1) {
                 switch (raiz->fb) {
                     case 0:
                         raiz->fb = 1;
                         *cresceu = 1;
                         break;
                     case 1:
-                        raiz->fb = 2;  // Atualizado para 2
                         *cresceu = 0;
                         return rotacao(raiz);
                     case -1:
@@ -139,7 +138,6 @@ arvore inserir(arvore raiz, int valor, int *cresceu) {
                         *cresceu = 0;
                         break;
                     case -1:
-                        raiz->fb = -2;  // Atualizado para -2
                         *cresceu = 0;
                         return rotacao(raiz);
                 }
